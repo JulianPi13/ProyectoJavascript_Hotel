@@ -88,3 +88,21 @@ footer {
     color: #555;
     border-top: 1px solid #222;
 }
+
+ /* HERO */
+.hero, .contactanos, .perfil {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2, .contactanos h2, .perfil h2 {
+    font-size: 45px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.hero, .contactanos, .perfil p {
+    color: #555;
+    font-size: 18px;
+    margin: 15px 0 30px;
+}
