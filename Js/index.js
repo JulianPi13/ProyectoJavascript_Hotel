@@ -1,5 +1,3 @@
-
-// CAMBIO DE PESTAÑAS
 function switchTab(tab) {
     const btnLogin = document.querySelectorAll('.tab-btn')[0];
     const btnRegistro = document.querySelectorAll('.tab-btn')[1];
@@ -57,7 +55,6 @@ async function registrarUsuario(event) {
         return;
     }
 
-    // Verificar que no sea el correo del admin
     const admin = await cargarAdmin();
     if (admin && admin.email === email) {
         mostrarAlerta("No puedes registrarte con ese correo electrónico.");
@@ -65,7 +62,6 @@ async function registrarUsuario(event) {
     }
 
     const usuarios = cargarUsuariosLocal();
-
     const existe = usuarios.find(u => u.email === email);
     if (existe) {
         mostrarAlerta("Ya existe una cuenta registrada con ese correo electrónico.");
@@ -91,7 +87,6 @@ async function registrarUsuario(event) {
 }
 
 // INICIAR SESIÓN
-
 async function iniciarSesion() {
     const correo = document.getElementById("login-correo").value.trim();
     const contraseña = document.getElementById("login-password").value.trim();
@@ -104,6 +99,7 @@ async function iniciarSesion() {
     // 1. Verificar si es el admin (desde JSON)
     const admin = await cargarAdmin();
     if (admin && admin.email === correo && admin.contraseña === contraseña) {
+        sessionStorage.setItem('usuario_activo', admin.email);
         mostrarAlerta(`¡Bienvenido/a, ${admin.nombres}!`);
         window.location.href = "Inicio.html";
         return;
@@ -114,6 +110,7 @@ async function iniciarSesion() {
     const usuario = usuarios.find(u => u.email === correo && u.contraseña === contraseña);
 
     if (usuario) {
+        sessionStorage.setItem('usuario_activo', usuario.email);
         mostrarAlerta(`¡Bienvenido/a, ${usuario.nombres}!`);
         window.location.href = "Inicio.html";
     } else {
@@ -122,14 +119,11 @@ async function iniciarSesion() {
 }
 
 // MOSTRAR ALERTA
-
 function mostrarAlerta(mensaje) {
     alert(mensaje);
 }
 
-
 // EVENT LISTENERS
-
 document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("formRegistro").addEventListener("submit", registrarUsuario);
     document.getElementById("btnLogin").addEventListener("click", iniciarSesion);
