@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0D0D0D;
+    color: #FFFFFF;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    color: #F7931A;
+    margin: 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    margin-left: 15px;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+nav a:hover {
+    color: #F7931A;
+    opacity: 1;
+}
+
+.btn {
+    background: #F7931A;
+    color: #0D0D0D;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* SECCIÓN */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    color: #F7931A;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    background: #111;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.card p {
+    color: #555;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+    border-top: 1px solid #222;
+}
