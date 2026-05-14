@@ -135,7 +135,7 @@ input:focus {
 }
 
 /* ===== BOTON ENVIAR ===== */
-.submit-btn {
+.boton   {
     margin-top: 26px;
     padding: 14px;
     width: 100%;
@@ -150,7 +150,7 @@ input:focus {
     font-family: 'Poppins', sans-serif;
 }
 
-.submit-btn:hover {
+.boton:hover {
     background: #FFA733;
     transform: scale(1.02);
 }
