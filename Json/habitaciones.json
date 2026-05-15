@@ -1,0 +1,134 @@
+{
+  "habitaciones": [
+    {
+      "id": 1,
+      "accion_hotel": "Reserva",
+      "nombre": "Suite Presidencial",
+      "habitacion_numero": 101,
+      "area_m2": 72,
+      "ubicacion": "Torre Este",
+      "precio_por_noche": 420000,
+      "camas": 2,
+      "max_personas": 4,
+      "disponibilidad": true,
+      "descripcion": "Suite amplia con sala privada, balcón panorámico y servicios de lujo.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Jacuzzi",
+        "Aire acondicionado",
+        "TV satelital",
+        "Caja fuerte"
+      ],
+      "servicios_hotel": [
+        "Restaurante y desayuno incluido",
+        "Spa",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 2,
+      "accion_hotel": "Reserva",
+      "nombre": "Suite Junior",
+      "habitacion_numero": 202,
+      "area_m2": 54,
+      "ubicacion": "Torre Central",
+      "precio_por_noche": 320000,
+      "camas": 2,
+      "max_personas": 3,
+      "disponibilidad": true,
+      "descripcion": "Habitación cómoda con sala de estar y vista al jardín.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV de pantalla plana",
+        "Ducha de hidromasaje"
+      ],
+      "servicios_hotel": [
+        "Desayuno buffet",
+        "Spa",
+        "Zonas húmedas"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 3,
+      "accion_hotel": "Reserva",
+      "nombre": "Doble Deluxe",
+      "habitacion_numero": 305,
+      "area_m2": 36,
+      "ubicacion": "Torre Oeste",
+      "precio_por_noche": 220000,
+      "camas": 2,
+      "max_personas": 2,
+      "disponibilidad": true,
+      "descripcion": "Habitación elegante con cama doble, baño privado y servicios esenciales.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV",
+        "Caja fuerte"
+      ],
+      "servicios_hotel": [
+        "Restaurante",
+        "Piscina",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 4,
+      "accion_hotel": "Reserva",
+      "nombre": "Familiar Superior",
+      "habitacion_numero": 410,
+      "area_m2": 60,
+      "ubicacion": "Torre Jardín",
+      "precio_por_noche": 360000,
+      "camas": 3,
+      "max_personas": 5,
+      "disponibilidad": false,
+      "descripcion": "Espacio familiar con dos áreas de descanso y baño con ducha doble.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Minibar",
+        "Aire acondicionado",
+        "TV",
+        "Silla de trabajo"
+      ],
+      "servicios_hotel": [
+        "Restaurante",
+        "Spa",
+        "Zonas húmedas"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    },
+    {
+      "id": 5,
+      "accion_hotel": "Reserva",
+      "nombre": "Individual Ejecutiva",
+      "habitacion_numero": 517,
+      "area_m2": 28,
+      "ubicacion": "Torre Negocios",
+      "precio_por_noche": 180000,
+      "camas": 1,
+      "max_personas": 1,
+      "disponibilidad": true,
+      "descripcion": "Habitación práctica para viajeros de negocio, con escritorio y conexión rápida.",
+      "servicios": [
+        "Internet Wi-Fi",
+        "Aire acondicionado",
+        "TV",
+        "Escritorio de trabajo"
+      ],
+      "servicios_hotel": [
+        "Comidas",
+        "Spa",
+        "Zona húmeda"
+      ],
+      "contacto_reserva": "+57 310 123 4567"
+    }
+  ]
+}
