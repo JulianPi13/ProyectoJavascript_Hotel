@@ -400,3 +400,35 @@ footer {
         justify-content: center;
     }
 }
+
+/* carrusel */
+/* Contenedor que recorta lo que sobra */
+.buffet-img-container, 
+.gym-img-container, 
+.spa-img-container, 
+.zonas-humedas-img-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    height: 350px;
+    overflow: hidden; /* Oculta las fotos que no están activas */
+    border-radius: 12px;
+    padding: 10px; /* Espacio para el borde */
+}
+
+/* El carrete que contiene todas las imágenes */
+.carrusel-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+    gap: 20px; /* Espacio entre las imágenes */
+}
+
+/* Ajuste para las imágenes */
+.buffet-img, .gym-img, .spa-img, .zonas-humedas-img {
+    min-width: 100%; /* Cada foto ocupa el 100% del contenedor */
+    height: 100%; /* Ajusta la altura para mantener la proporción */
+    object-fit: cover;
+    flex-shrink: 0;
+}
