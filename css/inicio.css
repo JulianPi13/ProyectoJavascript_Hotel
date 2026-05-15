@@ -10,24 +10,28 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+    background-color: #d97f12;
     border-bottom: 1px solid #222;
 }
 
 header h1 {
-    color: #F7931A;
+    color: #000000;
     margin: 0;
 }
 
 nav a {
-    color: #FFFFFF;
+    color: #4b2e0b;
     margin-left: 15px;
+    font-size: 20px;
     text-decoration: none;
     opacity: 0.8;
 }
 
 nav a:hover {
-    color: #F7931A;
+    color: #000000;
     opacity: 1;
+    font-size: 23px;
+    transition: all 0.3s ease;
 }
 
 .btn-redirigir a {
