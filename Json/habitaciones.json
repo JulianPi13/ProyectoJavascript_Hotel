@@ -8,8 +8,8 @@
       "area_m2": 72,
       "ubicacion": "Torre Este",
       "precio_por_noche": 420000,
-      "camas": 2,
-      "max_personas": 4,
+      "camas": 3,
+      "max_personas": 6,
       "disponibilidad": true,
       "descripcion": "Suite amplia con sala privada, balcón panorámico y servicios de lujo.",
       "servicios": [
