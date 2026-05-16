@@ -8,17 +8,18 @@
       "area_m2": 72,
       "ubicacion": "Torre Este",
       "precio_por_noche": 420000,
-      "camas": 3,
-      "max_personas": 6,
+      "camas": 1,
+      "max_personas": 2,
       "disponibilidad": true,
-      "descripcion": "Suite amplia con sala privada, balcón panorámico y servicios de lujo.",
+      "descripcion": "Suite amplia con sala privada, balcón panorámico y servicios de lujo, perfecta para una estancia exclusiva, ideal para familias o grupos que buscan comodidad y elegancia, con acceso a áreas VIP del hotel, ofreciendo una experiencia inolvidable, con atención personalizada y servicios de alta gama.",
       "servicios": [
         "Internet Wi-Fi",
         "Minibar",
         "Jacuzzi",
         "Aire acondicionado",
         "TV satelital",
-        "Caja fuerte"
+        "Caja fuerte",
+        "Piano de cola"
       ],
       "servicios_hotel": [
         "Restaurante y desayuno incluido",

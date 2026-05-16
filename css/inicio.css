@@ -130,26 +130,107 @@ footer {
     margin: 15px 0 30px;
 }
 
-.instalaciones {
-    padding: 60px 20px;
-    text-align: center;
+/* ==========================================================================
+   Contenedor Principal (Layout de dos columnas + botones abajo)
+   ========================================================================== */
+.botones {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones bajen a la siguiente línea */
+    align-items: center; /* Alinea el cuadro de texto y la imagen verticalmente */
+    gap: 30px; /* Espacio de separación entre columnas */
+    margin: 50px auto; /* Centra el bloque en la pantalla y da margen arriba/abajo */
+    max-width: 1200px; /* Ancho máximo de la sección */
+    padding: 0 20px; /* Colchón a los lados para pantallas medianas */
 }
 
+/* ==========================================================================
+   Bloques de Texto (Habitaciones e Instalaciones)
+   ========================================================================== */
+.habitaciones-desplazamiento, 
+.instalaciones {
+    flex: 1; /* Ocupa el 50% del espacio disponible */
+    min-width: 300px; /* Evita que se aplaste demasiado en pantallas chicas */
+    padding: 50px 30px;
+    text-align: left;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.habitaciones-desplazamiento h2, 
 .instalaciones h2 {
     color: #ffffff;
     font-size: 35px;
+    margin-top: 0;
     margin-bottom: 20px;
 }
 
-.resaltado{
-    color: #F7931A;
+.habitaciones-desplazamiento p, 
+.instalaciones p {
+    color: #555555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
 }
 
-.instalaciones p {
-    color: #555;
-    font-size: 20px;
-    margin: 0 auto;
-    max-width: 600px;
+/* ==========================================================================
+   Contenedores de Imágenes (Collages)
+   ========================================================================== */
+.imagenes-botones, 
+.botones > div:nth-child(2) {
+    flex: 1; /* Ocupa el otro 50% del espacio disponible */
+    min-width: 300px;
+    display: flex;
+    justify-content: center; /* Centra la imagen en su columna */
+}
+
+.collage-habitaciones, 
+.collage-instalaciones {
+    width: 400px;
+    max-width: 550px; /* Controla el tamaño máximo del collage */
+    height: 400px;
+    border: 2px solid #F7931A;
+}
+
+
+/* ==========================================================================
+   Sección de Botones de Redirección (Fila Inferior)
+   ========================================================================== */
+.botones-redirigir {
+    flex: 1 1 100%; /* Truco maestro: obliga a los botones a ocupar el 100% abajo */
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 15px; /* Espacio entre cada botón */
+    margin-top: 20px;
+}
+
+.btn-redirigir {
+    background-color: #F7931A;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-redirigir a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Efecto Hover para los botones */
+.btn-redirigir:hover {
+    background-color: #F7931A;
+}
+
+.btn-redirigir:hover a {
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   Estilos Globales / Utilidades
+   ========================================================================== */
+.resaltado {
+    color: #F7931A;
 }
 
 .container {
@@ -432,3 +513,62 @@ footer {
     object-fit: cover;
     flex-shrink: 0;
 }
+
+/*habitaciones*/
+.habitaciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #0D0D0D; 
+    box-sizing: border-box;
+}
+
+.habitaciones-text {
+    flex: 1;
+}
+
+.habitaciones-img-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    height: 200px;
+    width: 200px;
+}
+
+.habitacion-img {
+    width: 70%;
+    height: 70%;
+    border-radius: 12px;
+    border: #F7931A solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     
+}
+
+.habitaciones-p{
+    color: #555;
+    font-size: 22px;
+    text-align: center;
+}
+
+.btn-habitaciones {
+    background: #F7931A;
+    color: #0D0D0D;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-habitaciones:hover {
+    opacity: 0.9;
+    color: #FFFFFF;
+}
+
+
