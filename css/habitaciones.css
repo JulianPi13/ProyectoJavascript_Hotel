@@ -90,6 +90,27 @@ body {
     color: #E0E0E0;
 }
 
+.btn-habitaciones {
+    display: inline-block;
+    margin-top: 10px;
+    background: #F7931A;
+    color: #0D0D0D;;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+.btn-habitaciones:hover {
+    background: #e07f0f;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 147, 26, 0.4);
+}
+
 /* ===== SECCIONES ===== */
 .detalles-section,
 .servicios-section,
