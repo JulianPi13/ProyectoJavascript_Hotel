@@ -1,561 +1,436 @@
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #0D0D0D;
     color: #FFFFFF;
+    scroll-behavior: smooth;
 }
 
+/* ============================================================
+   HEADER — STICKY
+   ============================================================ */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 16px 40px;
     background-color: #d97f12;
-    border-bottom: 1px solid #222;
+    border-bottom: 2px solid #b8690e;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
 }
 
 header h1 {
     color: #000000;
     margin: 0;
+    font-size: 22px;
 }
 
-nav a {
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
     color: #4b2e0b;
-    margin-left: 15px;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: bold;
     text-decoration: none;
-    opacity: 0.8;
+    opacity: 0.85;
+    transition: all 0.2s ease;
 }
 
-nav a:hover {
+.nav-link:hover {
     color: #000000;
     opacity: 1;
-    font-size: 23px;
-    transition: all 0.3s ease;
 }
 
-.btn-redirigir a {
-    color: #0D0D0D;
-    text-decoration: none;
+.nav-contacto {
+    font-size: 22px;
+    line-height: 1;
 }
 
-.btn-redirigir:hover a {
-    color: #FFFFFF;
+.nav-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4b2e0b;
+    display: block;
+    transition: border-color 0.2s ease;
 }
 
-.botones-redirigir {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 60px;;
+.nav-avatar:hover {
+    border-color: #000;
 }
 
-.btn, .btn-redirigir {
-    background: #F7931A;
-    color: #0D0D0D;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 16px;
-
-}
-
-.btn:hover, .btn-redirigir:hover {
-    opacity: 0.9;
-    color: #FFFFFF;
-}
-
-.section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    color: #F7931A;
-}
-
-.cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 30px;
-}
-
-.card {
-    background: #111;
-    padding: 20px;
-    width: 250px;
-    border-radius: 12px;
-    border: 1px solid #222;
-}
-
-.card p {
-    color: #555;
-}
-
-input {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #555;
-    border-top: 1px solid #222;
-}
-
- /* HERO */
-.hero, .contactanos, .perfil {
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h2, .contactanos h2, .perfil h2 {
-    font-size: 45px;
-    margin: 0;
-    color: #FFFFFF;
-}
-
-.hero, .contactanos, .perfil p {
-    color: #555;
-    font-size: 18px;
-    margin: 15px 0 30px;
-}
-
-/* ==========================================================================
-   Contenedor Principal (Layout de dos columnas + botones abajo)
-   ========================================================================== */
-.botones {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los botones bajen a la siguiente línea */
-    align-items: center; /* Alinea el cuadro de texto y la imagen verticalmente */
-    gap: 30px; /* Espacio de separación entre columnas */
-    margin: 50px auto; /* Centra el bloque en la pantalla y da margen arriba/abajo */
-    max-width: 1200px; /* Ancho máximo de la sección */
-    padding: 0 20px; /* Colchón a los lados para pantallas medianas */
-}
-
-/* ==========================================================================
-   Bloques de Texto (Habitaciones e Instalaciones)
-   ========================================================================== */
-.habitaciones-desplazamiento, 
-.instalaciones {
-    flex: 1; /* Ocupa el 50% del espacio disponible */
-    min-width: 300px; /* Evita que se aplaste demasiado en pantallas chicas */
-    padding: 50px 30px;
-    text-align: left;
-    box-sizing: border-box;
-    flex: 1;
-}
-
-.habitaciones-desplazamiento h2, 
-.instalaciones h2 {
-    color: #ffffff;
-    font-size: 35px;
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-
-.habitaciones-desplazamiento p, 
-.instalaciones p {
-    color: #555555;
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0;
-}
-
-/* ==========================================================================
-   Contenedores de Imágenes (Collages)
-   ========================================================================== */
-.imagenes-botones, 
-.botones > div:nth-child(2) {
-    flex: 1; /* Ocupa el otro 50% del espacio disponible */
-    min-width: 300px;
-    display: flex;
-    justify-content: center; /* Centra la imagen en su columna */
-}
-
-.collage-habitaciones, 
-.collage-instalaciones {
-    width: 400px;
-    max-width: 550px; /* Controla el tamaño máximo del collage */
-    height: 400px;
-    border: 2px solid #F7931A;
-}
-
-
-/* ==========================================================================
-   Sección de Botones de Redirección (Fila Inferior)
-   ========================================================================== */
-.botones-redirigir {
-    flex: 1 1 100%; /* Truco maestro: obliga a los botones a ocupar el 100% abajo */
-    display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 15px; /* Espacio entre cada botón */
-    margin-top: 20px;
-}
-
-.btn-redirigir {
-    background-color: #F7931A;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-redirigir a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Efecto Hover para los botones */
-.btn-redirigir:hover {
-    background-color: #F7931A;
-}
-
-.btn-redirigir:hover a {
-    color: #ffffff;
-}
-
-/* ==========================================================================
-   Estilos Globales / Utilidades
-   ========================================================================== */
-.resaltado {
-    color: #F7931A;
-}
-
+/* ============================================================
+   BIENVENIDA
+   ============================================================ */
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
-    gap: 40px; 
-    background-color: #0D0D0D; 
-    padding: 50px;
+    justify-content: space-between;
+    gap: 40px;
+    background-color: #0D0D0D;
+    padding: 70px 60px;
 }
 
 .container-text {
-    flex: 1; 
+    flex: 1;
 }
 
 .container-text h2 {
     color: #FFFFFF;
-    font-size: 30px;
+    font-size: 36px;
     text-align: left;
     margin-bottom: 20px;
-}
-
-.container-text h2 .resaltado {
-    color: #F7931A; 
+    line-height: 1.3;
 }
 
 .container-text p {
-    color: #555;
-    font-size: 25px;
-    margin: 0 0 30px;
+    color: #888;
+    font-size: 20px;
+    margin: 0;
     text-align: left;
+    line-height: 1.7;
 }
 
 .container-img {
-    flex: 1; 
+    flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
 .container-img img {
-    width: 100%; 
-    max-width: 500px; 
-    height: 300px;
+    width: 100%;
+    max-width: 520px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    .container-main {
-        flex-direction: column;
-        text-align: center;
-    }
-    .container-text, .container-img {
-        text-align: center;
-    }
-}
-
-.buffet {
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    gap: 40px;
-    padding: 60px;
-    background: #0D0D0D; 
-}
-
-
-.buffet-text {
-    flex: 1;
-}
-
-.buffet h2 {
-    color: #FFFFFF;
-    font-size: 30px;
-    text-align: left; 
-    margin-bottom: 20px;
-}
-
-.buffet h2 .resaltado {
-    color: #F7931A; 
-}
-
-.buffet p {
-    color: #555;
-    font-size: 25px;
-    margin: 0;
-    text-align: left; 
-}
-
-.buffet-img-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.buffet img {
-    width: 100%; 
-    max-width: 500px; 
-    height: 350px; 
-    object-fit: cover;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 2px solid #F7931A;
 }
 
-@media (max-width: 900px) {
-    .buffet {
+@media (max-width: 768px) {
+    .container {
         flex-direction: column;
+        padding: 40px 24px;
         text-align: center;
     }
-    .buffet h2, .buffet p {
+    .container-text h2,
+    .container-text p {
         text-align: center;
+    }
+    .container-img {
+        justify-content: center;
     }
 }
 
-.gym, .zonas-humedas {
+/* ============================================================
+   MENÚ DE NAVEGACIÓN RÁPIDA
+   ============================================================ */
+.menu-rapido {
+    background: #161616;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 28px 20px;
+}
+
+.menu-rapido-inner {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.menu-rapido-titulo {
+    color: #888;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.menu-rapido-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.btn-menu {
+    background: transparent;
+    color: #F7931A;
+    border: 2px solid #F7931A;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.02em;
+}
+
+.btn-menu:hover {
+    background: #F7931A;
+    color: #0D0D0D;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 147, 26, 0.35);
+}
+
+/* ============================================================
+   UTILIDADES COMUNES
+   ============================================================ */
+.resaltado {
+    color: #F7931A;
+}
+
+/* ============================================================
+   TÍTULO DE SECCIÓN
+   ============================================================ */
+.seccion-titulo-wrapper {
+    padding: 0 0 60px 0;
+}
+
+.seccion-titulo {
+    text-align: center;
+    padding: 70px 20px 50px;
+    border-bottom: 1px solid #1e1e1e;
+    margin-bottom: 60px;
+}
+
+.seccion-titulo h2 {
+    font-size: 48px;
+    margin: 0 0 14px 0;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+
+.seccion-subtitulo {
+    color: #666;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   HABITACIONES — CARDS
+   ============================================================ */
+.habitacion-card {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto 70px auto;
+    padding: 0 40px;
+}
+
+.habitacion-card.invertida {
     flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-    gap: 290px;
-    padding: 50px;
-    background-color: #0D0D0D;
-    width: 100%;
-    box-sizing: border-box;
 }
 
-.gym-text, .zonas-humedas-text {
+.habitacion-img-wrap {
     flex: 1;
+    min-width: 0;
 }
 
-.gym-text h2, .zonas-humedas-text h2 {
+.habitacion-img-wrap img {
+    width: 100%;
+    max-width: 500px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 2px solid #F7931A;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    display: block;
+}
+
+.habitacion-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.habitacion-info h3 {
+    font-size: 32px;
+    margin: 0 0 20px 0;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.habitacion-info p {
+    color: #888;
+    font-size: 17px;
+    line-height: 1.75;
+    margin: 0 0 16px 0;
+}
+
+.btn-habitaciones {
+    display: inline-block;
+    margin-top: 10px;
+    background: #F7931A;
+    color: #0D0D0D;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.25s ease;
+}
+
+.btn-habitaciones:hover {
+    background: #e07f0f;
     color: #FFFFFF;
-    font-size: 35px;
-    text-align: left;
-    margin-bottom: 20px;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(247, 147, 26, 0.4);
 }
 
-.gym-text .resaltado, .zonas-humedas-text .resaltado {
+@media (max-width: 820px) {
+    .habitacion-card,
+    .habitacion-card.invertida {
+        flex-direction: column;
+        padding: 0 24px;
+        gap: 30px;
+    }
+    .habitacion-img-wrap img {
+        max-width: 100%;
+        height: 260px;
+    }
+}
+
+/* ============================================================
+   INSTALACIONES — BLOQUES
+   ============================================================ */
+.instalacion-bloque {
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+    padding: 0 40px;
+    position: relative;
+}
+
+.instalacion-label {
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     color: #F7931A;
+    margin-bottom: 10px;
+    padding-left: 4px;
 }
 
-.gym-text p, .zonas-humedas-text p {
-    color: #555;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
+.instalacion-contenido {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.instalacion-bloque.invertida .instalacion-contenido {
+    flex-direction: row-reverse;
+}
+
+.instalacion-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.instalacion-texto h3 {
+    color: #ffffff;
+    font-size: 30px;
+    margin: 0 0 18px 0;
+    line-height: 1.2;
+}
+
+.instalacion-texto p {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.75;
     margin: 0;
 }
 
-.gym-img-container, .zonas-humedas-img-container {
+/* ============================================================
+   CARRUSEL — IMÁGENES DE INSTALACIONES
+   ============================================================ */
+.instalacion-imagen {
     flex: 1;
-    display: flex;
-    justify-content: flex-end; 
+    min-width: 0;
 }
 
-.gym-img, .zonas-humedas-img {
-    width: 100%; 
-    max-width: 500px; 
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: #F7931A solid 2px; 
-}
-
-@media (max-width: 992px) {
-    .gym, .zonas-humedas {
-        flex-direction: column; 
-        padding: 40px 5%;
-        text-align: center;
-    }
-
-    .gym-text h2, 
-    .gym-text p,.zonas-humedas-text h2,
-    .zonas-humedas-text p {
-        text-align: center;
-    }
-
-    .gym-img-container, .zonas-humedas-img-container {
-        justify-content: center;
-    }
-}
-
-.spa {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 290px;
-    padding: 50px;
-    background-color: #0D0D0D; 
-    box-sizing: border-box;
-}
-
-
-.spa-text {
-    flex: 1;
-}
-
-.spa-text h2 {
-    color: #FFFFFF;
-    font-size: 35px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.spa-text .resaltado {
-    color: #F7931A;
-}
-
-.spa-text p {
-    color: #555;
-    font-size: 25px;
-    line-height: 1.6;
-    text-align: left;
-    margin: 0;
-}
-
-.spa-img-container {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.spa-img {
-    width: 100%;
-    max-width: 550px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: #F7931A solid 2px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
-}
-
-@media (max-width: 992px) {
-    .spa {
-        flex-direction: column; 
-        padding: 40px 5%;
-        text-align: center;
-    }
-
-    .spa-text h2, 
-    .spa-text p {
-        text-align: center;
-    }
-
-    .spa-img-container {
-        justify-content: center;
-    }
-}
-
-/* carrusel */
-/* Contenedor que recorta lo que sobra */
-.buffet-img-container, 
-.gym-img-container, 
-.spa-img-container, 
+.buffet-img-container,
+.gym-img-container,
+.spa-img-container,
 .zonas-humedas-img-container {
     position: relative;
     width: 100%;
-    max-width: 550px;
-    height: 350px;
-    overflow: hidden; /* Oculta las fotos que no están activas */
-    border-radius: 12px;
-    padding: 10px; /* Espacio para el borde */
+    max-width: 520px;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 2px solid #F7931A;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    flex-shrink: 0;
 }
 
-/* El carrete que contiene todas las imágenes */
 .carrusel-track {
     display: flex;
     width: 100%;
     height: 100%;
     transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
-    gap: 20px; /* Espacio entre las imágenes */
+    gap: 20px;
 }
 
-/* Ajuste para las imágenes */
-.buffet-img, .gym-img, .spa-img, .zonas-humedas-img {
-    min-width: 100%; /* Cada foto ocupa el 100% del contenedor */
-    height: 100%; /* Ajusta la altura para mantener la proporción */
+.buffet-img,
+.gym-img,
+.spa-img,
+.zonas-humedas-img {
+    min-width: 100%;
+    height: 100%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
-/*habitaciones*/
-.habitaciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: #0D0D0D; 
-    box-sizing: border-box;
+@media (max-width: 820px) {
+    .instalacion-contenido,
+    .instalacion-bloque.invertida .instalacion-contenido {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .instalacion-bloque {
+        padding: 0 24px;
+    }
+    .buffet-img-container,
+    .gym-img-container,
+    .spa-img-container,
+    .zonas-humedas-img-container {
+        max-width: 100%;
+        height: 260px;
+    }
 }
 
-.habitaciones-text {
-    flex: 1;
-}
-
-.habitaciones-img-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    height: 200px;
-    width: 200px;
-}
-
-.habitacion-img {
-    width: 70%;
-    height: 70%;
-    border-radius: 12px;
-    border: #F7931A solid 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-     
-}
-
-.habitaciones-p{
-    color: #555;
-    font-size: 22px;
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
     text-align: center;
+    padding: 30px 20px;
+    color: #444;
+    border-top: 1px solid #1e1e1e;
+    font-size: 14px;
+    margin-top: 20px;
 }
 
-.btn-habitaciones {
+/* ============================================================
+   BOTONES GENERALES
+   ============================================================ */
+.btn {
     background: #F7931A;
     color: #0D0D0D;
     padding: 12px 25px;
@@ -564,11 +439,10 @@ footer {
     font-weight: bold;
     cursor: pointer;
     font-size: 16px;
+    transition: all 0.25s ease;
 }
 
-.btn-habitaciones:hover {
-    opacity: 0.9;
+.btn:hover {
+    background: #e07f0f;
     color: #FFFFFF;
 }
-
-

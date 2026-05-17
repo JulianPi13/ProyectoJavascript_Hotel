@@ -11,7 +11,7 @@
       "camas": 1,
       "max_personas": 2,
       "disponibilidad": true,
-      "descripcion": "Suite amplia con sala privada, balcón panorámico y servicios de lujo, perfecta para una estancia exclusiva, ideal para familias o grupos que buscan comodidad y elegancia, con acceso a áreas VIP del hotel, ofreciendo una experiencia inolvidable, con atención personalizada y servicios de alta gama.",
+      "descripcion": "Disfruta de la máxima comodidad y lujo en nuestra suite presidencial, diseñada para ofrecer una estancia exclusiva con sala privada y detalles de alta gama. Ideal para parejas o viajeros que buscan un ambiente elegante, con servicios VIP, decoración sofisticada y atención personalizada en cada detalle.",
       "servicios": [
         "Internet Wi-Fi",
         "Minibar",
@@ -39,7 +39,7 @@
       "camas": 2,
       "max_personas": 3,
       "disponibilidad": true,
-      "descripcion": "Habitación cómoda con sala de estar y vista al jardín.",
+      "descripcion": "Una habitación moderna con sala de estar y vista al jardín, pensada para ofrecer confort y privacidad sin sacrificar estilo. Perfecta para estancias relajadas, con servicios premium como minibar, Wi-Fi rápido y una atmósfera cálida para descansar después de un día de actividades.",
       "servicios": [
         "Internet Wi-Fi",
         "Minibar",
@@ -65,7 +65,7 @@
       "camas": 2,
       "max_personas": 2,
       "disponibilidad": true,
-      "descripcion": "Habitación elegante con cama doble, baño privado y servicios esenciales.",
+      "descripcion": "Disfruta de una habitación elegante con cama doble y baño privado, pensada para el descanso absoluto de parejas o viajeros solos. Con un diseño cuidado y servicios esenciales de calidad, esta opción ofrece confort moderno y un ambiente acogedor en cada estancia.",
       "servicios": [
         "Internet Wi-Fi",
         "Minibar",
@@ -91,7 +91,7 @@
       "camas": 3,
       "max_personas": 5,
       "disponibilidad": false,
-      "descripcion": "Espacio familiar con dos áreas de descanso y baño con ducha doble.",
+      "descripcion": "Una habitación amplia diseñada para familias, con varias áreas de descanso y baño con ducha doble para mayor comodidad. Perfecta para grupos o parejas con niños, ofrece espacio adicional, servicios completos y una atmósfera tranquila para disfrutar juntos.",
       "servicios": [
         "Internet Wi-Fi",
         "Minibar",
@@ -117,7 +117,7 @@
       "camas": 1,
       "max_personas": 1,
       "disponibilidad": true,
-      "descripcion": "Habitación práctica para viajeros de negocio, con escritorio y conexión rápida.",
+      "descripcion": "Una opción práctica y silenciosa para viajeros de negocio, con escritorio y conexión rápida para trabajar con comodidad. Perfecta para estancias cortas, ofrece privacidad, servicios funcionales y un ambiente moderno que facilita el descanso tras un día de reuniones.",
       "servicios": [
         "Internet Wi-Fi",
         "Aire acondicionado",
