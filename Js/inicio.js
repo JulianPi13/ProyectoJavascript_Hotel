@@ -45,4 +45,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    async function cargarAdmin() {
+        try {
+            const respuesta = await fetch('Json/index.json');
+            const datos = await respuesta.json();
+            return datos.admin || null;
+        } catch (error) {
+            console.error('Error al cargar el admin desde JSON:', error);
+            return null;
+        }
+    }
+
+    async function obtenerUsuarioActivo() {
+        const emailActivo = sessionStorage.getItem('usuario_activo');
+        if (!emailActivo) return null;
+
+        const admin = await cargarAdmin();
+        if (admin && admin.email === emailActivo) {
+            return admin;
+        }
+
+        const usuarios = JSON.parse(localStorage.getItem('usuarios_plataforma') || '[]');
+        return usuarios.find(u => u.email === emailActivo) || null;
+    }
+
+    async function actualizarVisiblePanelControl() {
+        const enlacePanel = document.getElementById('nav-panelcontrol');
+        if (!enlacePanel) return;
+
+        const usuario = await obtenerUsuarioActivo();
+        if (!usuario || usuario.rol !== 'admin') {
+            enlacePanel.style.display = 'none';
+        } else {
+            enlacePanel.style.display = '';
+        }
+    }
+
+    actualizarVisiblePanelControl();
+
 });
