@@ -18,18 +18,21 @@ document.addEventListener("DOMContentLoaded", () => {
             let indiceActual = 0;
             const gap = 20; // debe coincidir con el gap del CSS
 
+            const getSlideOffset = () => {
+                const anchoImagen = imagenes[0]?.clientWidth || contenedor.clientWidth;
+                return anchoImagen + gap;
+            };
+
             if (imagenes.length > 1) {
                 setInterval(() => {
                     indiceActual = (indiceActual + 1) % imagenes.length;
-                    track.style.transform = `translateX(calc(-${indiceActual * 100}% - ${indiceActual * gap}px))`;
+                    const offset = getSlideOffset() * indiceActual;
+                    track.style.transform = `translateX(-${offset}px)`;
                 }, 4000);
             }
         }
     });
 
-    // =====================================================
-    // SCROLL SUAVE — MENÚ RÁPIDO
-    // =====================================================
     const botonesMenu = document.querySelectorAll(".btn-menu");
 
     botonesMenu.forEach(boton => {
@@ -79,6 +82,17 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
             enlacePanel.style.display = '';
         }
+    }
+
+
+    const enlaceCerrar = document.getElementById('cerrar-sesion');
+    if (enlaceCerrar) {
+        enlaceCerrar.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('Cerraste sesión correctamente');
+            sessionStorage.removeItem('usuario_activo');
+            window.location.href = 'index.html';
+        });
     }
 
     actualizarVisiblePanelControl();
