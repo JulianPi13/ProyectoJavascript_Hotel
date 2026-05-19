@@ -1,0 +1,49 @@
+/* Mantiene la estética del header y fondo */
+@import url("reservas.css");
+
+.contenedor-reservas {
+    max-width: 900px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
+
+.lista-reservas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-reserva {
+    background-color: #161616;
+    border: 2px solid #F7931A;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    color: #ffffff;
+}
+
+.card-reserva h3 {
+    margin: 0 0 10px 0;
+    color: #F7931A;
+}
+
+.card-reserva p {
+    margin: 4px 0;
+    font-size: 15px;
+}
+
+.card-reserva .btn-cancelar {
+    margin-top: 12px;
+    padding: 10px 20px;
+    background-color: #F7931A;
+    color: #0D0D0D;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.card-reserva .btn-cancelar:hover {
+    background-color: #d97f12;
+}
