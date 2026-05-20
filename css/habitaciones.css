@@ -19,6 +19,7 @@ body {
     max-width: 900px;
     margin: 0 auto;
     animation: fadeIn 0.5s ease;
+    padding: 0 16px;
 }
 
 @keyframes fadeIn {
@@ -102,6 +103,12 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: all 0.25s ease;
+}
+
+@media (max-width: 480px) {
+    .btn-habitaciones {
+        width: 100%;
+    }
 }
 
 .btn-habitaciones:hover {
@@ -208,10 +215,12 @@ body {
 @media (max-width: 768px) {
     .contenedor-principal {
         grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0;
     }
 
     .habitacion-header h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .detalles-grid {

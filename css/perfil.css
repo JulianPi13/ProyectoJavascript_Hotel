@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 50px 16px;
 }
 
@@ -282,14 +282,40 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 30px 14px;
+    }
+
+    .perfil-wrapper {
+        padding: 0 12px;
+    }
+
+    .reserva-card__header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .reserva-card__body {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 480px) {
     .datos-card {
         padding: 24px 20px;
     }
+
     .perfil-nombre {
         font-size: 20px;
     }
+
+    .reserva-card__header {
+        justify-content: center;
+    }
+
     .reserva-card__body {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
 }

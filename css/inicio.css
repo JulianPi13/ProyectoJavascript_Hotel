@@ -118,17 +118,42 @@ nav {
 }
 
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+        padding: 16px 18px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .nav-link,
+    .nav-contacto {
+        font-size: 15px;
+    }
+
     .container {
         flex-direction: column;
         padding: 40px 24px;
         text-align: center;
     }
+
     .container-text h2,
     .container-text p {
         text-align: center;
     }
+
     .container-img {
         justify-content: center;
+    }
+
+    .container-img img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -301,6 +326,7 @@ nav {
         padding: 0 24px;
         gap: 30px;
     }
+
     .habitacion-img-wrap img {
         max-width: 100%;
         height: 260px;
@@ -412,6 +438,65 @@ nav {
     .zonas-humedas-img-container {
         max-width: 100%;
         height: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 14px 14px;
+    }
+
+    .menu-rapido {
+        padding: 24px 16px;
+    }
+
+    .menu-rapido-botones {
+        gap: 10px;
+    }
+
+    .btn-menu {
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 12px 18px;
+    }
+
+    .seccion-titulo {
+        padding: 42px 16px 30px;
+        margin-bottom: 40px;
+    }
+
+    .seccion-titulo h2 {
+        font-size: 34px;
+    }
+
+    .seccion-subtitulo {
+        font-size: 16px;
+    }
+
+    .habitacion-card,
+    .habitacion-card.invertida,
+    .instalacion-contenido {
+        padding: 0 16px;
+    }
+
+    .habitacion-info h3 {
+        font-size: 26px;
+    }
+
+    .habitacion-info p,
+    .instalacion-texto p {
+        font-size: 16px;
+    }
+
+    .btn-habitaciones,
+    .btn {
+        width: 100%;
+        padding: 14px 18px;
+    }
+
+    .footer,
+    footer {
+        padding: 24px 16px;
     }
 }
 

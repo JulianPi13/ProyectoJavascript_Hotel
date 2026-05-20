@@ -13,7 +13,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 50px 16px;
 }
 
@@ -208,12 +208,56 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 32px 14px;
+    }
+
+    .contacto-wrapper {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .contacto-header {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .header-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contacto-titulo {
+        font-size: 28px;
+    }
+
+    .avatar-ring {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 @media (max-width: 480px) {
+    body {
+        padding: 24px 12px;
+    }
+
     .datos-card {
-        padding: 24px 20px;
+        padding: 24px 18px;
+    }
+
+    .contacto-titulo {
+        font-size: 26px;
     }
 
     .perfil-nombre {
         font-size: 20px;
+    }
+
+    .boton {
+        padding: 14px;
+        font-size: 14px;
     }
 }

@@ -52,3 +52,46 @@ body {
 .card-reserva .btn-cancelar:hover {
     background-color: #d97f12;
 }
+
+@media (max-width: 600px) {
+    .contenedor-reservas {
+        padding: 0 14px;
+        margin-top: 20px;
+    }
+
+    .card-reserva {
+        padding: 18px 16px;
+    }
+
+    .card-reserva h3 {
+        font-size: 20px;
+    }
+
+    .card-reserva p {
+        font-size: 14px;
+    }
+
+    .card-reserva .btn-cancelar {
+        width: 100%;
+        padding: 12px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-reservas {
+        padding: 0 12px;
+    }
+
+    .card-reserva {
+        padding: 16px 14px;
+    }
+
+    .card-reserva h3 {
+        font-size: 18px;
+    }
+
+    .card-reserva p {
+        font-size: 13px;
+    }
+}

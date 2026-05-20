@@ -210,11 +210,75 @@ footer {
    RESPONSIVE RESERVAS
    ============================================================ */
 @media (max-width: 600px) {
-    .formulario-reserva {
-        padding: 25px 20px;
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+        padding: 14px 18px;
     }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .contenedor-reserva {
+        padding: 0 14px;
+        margin-top: 16px;
+    }
+
+    .formulario-reserva {
+        padding: 28px 18px;
+    }
+
     .fila-formulario {
         flex-direction: column;
-        gap: 0;
+        gap: 16px;
+    }
+
+    .grupo-formulario label {
+        font-size: 14px;
+    }
+
+    .formulario-reserva input[type="text"],
+    .formulario-reserva input[type="email"],
+    .formulario-reserva input[type="date"],
+    .formulario-reserva select,
+    .formulario-reserva textarea {
+        font-size: 15px;
+    }
+
+    .formulario-reserva .btn-habitaciones {
+        width: 100%;
+        max-width: 100%;
+        padding: 14px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-reserva {
+        padding: 22px 16px;
+    }
+
+    .contenedor-reserva {
+        max-width: 100%;
+        padding: 0 12px;
+    }
+
+    .seccion-titulo {
+        font-size: 24px;
+    }
+
+    .seccion-subtitulo {
+        font-size: 16px;
+    }
+
+    .btn-habitaciones {
+        font-size: 16px;
     }
 }
