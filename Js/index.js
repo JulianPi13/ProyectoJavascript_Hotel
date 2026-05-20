@@ -100,6 +100,7 @@ async function iniciarSesion() {
     const admin = await cargarAdmin();
     if (admin && admin.email === correo && admin.contraseña === contraseña) {
         sessionStorage.setItem('usuario_activo', admin.email);
+        sessionStorage.setItem('usuario_rol', 'admin');
         mostrarAlerta(`¡Bienvenido/a, ${admin.nombres}!`);
         window.location.href = "Inicio.html";
         return;
@@ -111,6 +112,7 @@ async function iniciarSesion() {
 
     if (usuario) {
         sessionStorage.setItem('usuario_activo', usuario.email);
+        sessionStorage.setItem('usuario_rol', usuario.rol || 'usuario');
         mostrarAlerta(`¡Bienvenido/a, ${usuario.nombres}!`);
         window.location.href = "Inicio.html";
     } else {

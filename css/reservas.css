@@ -85,7 +85,8 @@ nav {
     margin-bottom: 24px;
 }
 
-body{
+body {
+    margin: 0;
     background-color: #0D0D0D; /* Fondo */
 }
 

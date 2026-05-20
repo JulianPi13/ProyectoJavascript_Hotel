@@ -91,6 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             e.preventDefault();
             alert('Cerraste sesión correctamente');
             sessionStorage.removeItem('usuario_activo');
+            sessionStorage.removeItem('usuario_rol');
             window.location.href = 'index.html';
         });
     }

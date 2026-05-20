@@ -1,6 +1,11 @@
 /* Mantiene la estética del header y fondo */
 @import url("reservas.css");
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .contenedor-reservas {
     max-width: 900px;
     margin: 0 auto 80px auto;
